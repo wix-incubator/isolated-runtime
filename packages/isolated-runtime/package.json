@@ -1,13 +1,18 @@
 {
   "name": "isolated-runtime",
   "version": "1.0.0",
-  "description": "",
+  "description": "Run un-trusted javascript code in a multi-tenant, isolated environment",
   "main": "index.js",
   "keywords": [
     "thread",
     "runner",
     "code",
-    "isolated"
+    "isolated",
+    "javascript",
+    "untrusted",
+    "un-trusted",
+    "sandbox",
+    "jail"
   ],
   "files": [
     "index.js",

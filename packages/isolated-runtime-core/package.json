@@ -1,7 +1,7 @@
 {
   "name": "isolated-runtime-core",
   "version": "1.0.0",
-  "description": "",
+  "description": "Isolated Runtime Core",
   "main": "index.js",
   "keywords": [],
   "author": "",
