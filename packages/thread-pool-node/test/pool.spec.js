@@ -1,11 +1,10 @@
 const createPool = require("..");
 const messages = require("./messages");
-const Chance = require("chance");
-
-const chance = new Chance();
+const chance = require("chance")();
 
 describe("Worker Threads Pool", () => {
   let pool;
+
   test("throws when given worker path does not exist", () => {
     expect(() =>
       createPool({

@@ -11,7 +11,7 @@ const pool = createPool({
   workerPath: './path/to/worker.js',
   workerOptions: {
     workerData: {
-      a: 1
+      magicNumber: 42
     }
   },
   poolOptions: {
@@ -38,6 +38,6 @@ worker.postMessage(args);
 const { parentPort, workerData } = require("worker_threads");
 
 parentPort.on("message", message => {
-  parentPort.postMessage({ result: workerData.a * 2 })
+  parentPort.postMessage({ result: workerData.magicNumber })
 });
 ```

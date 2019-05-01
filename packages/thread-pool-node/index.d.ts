@@ -7,6 +7,4 @@ export interface WorkerThreadsPoolOptions {
   poolOptions: Options;
 }
 
-type createPool = (options: WorkerThreadsPoolOptions) => Pool<Worker>;
-
-export default createPool;
+export default function(options: WorkerThreadsPoolOptions): Pool<Worker>;
