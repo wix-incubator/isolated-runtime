@@ -1,5 +1,6 @@
 # Isolated Runtime
 
+[![npm version](https://badge.fury.io/js/isolated-runtime.svg)](https://badge.fury.io/js/isolated-runtime)
 [![Build Status](https://api.travis-ci.org/wix-incubator/isolated-runtime.svg)](https://travis-ci.org/wix-incubator/isolated-runtime)
 
 `isolated-runtime` requires node v10 and above.
