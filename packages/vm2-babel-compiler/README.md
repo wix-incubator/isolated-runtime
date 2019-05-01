@@ -1,10 +1,12 @@
 # VM2 Babel Compiler
 
 A module for compiling nodejs code with Babel.
-Since node.js supports almost everything natively, this module only uses the `@babel/plugin-transform-modules-commonjs` plugin to support `import/export` in `.js` files.
+
+Since newer versions of node.js (8 and above) support almost everything natively, this module only uses the `@babel/plugin-transform-modules-commonjs` plugin to transpile `import/export` to `require` and `module.exports`.
 
 ## Getting Started
-Install vm2-babel-compiler:
+Install:
+
 ```npm install --save vm2-babel-compiler```
 
 A basic usage example:
