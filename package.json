@@ -17,12 +17,18 @@
     "lerna": "^3.13.2",
     "prettier": "^1.16.4"
   },
+  "config": {
+    "benchmark": {
+      "requests": 500,
+      "time": 60000
+    }
+  },
   "scripts": {
     "clean": "lerna clean --yes && rm -rf node_modules",
     "postinstall": "lerna bootstrap --hoist",
     "test": "node --experimental-worker node_modules/.bin/jest --forceExit",
     "posttest": "eslint .",
-    "benchmark": "node --experimental-worker benchmark 500 60000"
+    "benchmark": "node --experimental-worker benchmark $npm_package_config_benchmark_requests $npm_package_config_benchmark_time"
   },
   "engines": {
     "node": ">=10.6.0"
