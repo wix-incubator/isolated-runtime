@@ -23,7 +23,7 @@ const { IsolatedRuntime } = require('isolated-runtime');
 const runtime = new IsolatedRuntime(/* options */)
 
 try {
-  await run({
+  await runtime.run({
     folder,
     file,
     funcName,
