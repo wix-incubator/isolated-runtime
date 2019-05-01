@@ -7,10 +7,6 @@ module.exports = {
   },
   extends: ["airbnb-base", "prettier", "plugin:jest/recommended"],
   plugins: ["jest", "prettier"],
-  globals: {
-    Atomics: "readonly",
-    SharedArrayBuffer: "readonly"
-  },
   parserOptions: {
     ecmaVersion: 2018
   },
