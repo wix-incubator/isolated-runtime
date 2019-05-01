@@ -1,8 +1,10 @@
 # Thread Pool
 
-Based on [generic-pool](https://www.npmjs.com/package/generic-pool).
+A Thread pool for nodejs worker-threads, which is based on [generic-pool](https://www.npmjs.com/package/generic-pool).
 
-## Example
+It relies on the generic-pool mechanism to handle the resources.
+
+## Usage Example
 ```js
 // index.js
 const createPool = require('thread-pool-node')
@@ -23,7 +25,7 @@ const pool = createPool({
 const worker = await pool.acquire();
 const onMessage = result => {
   // do something with worker
-
+  doSomeHeavyComputation();
   // release back to thread pool
   pool.release(worker);
   worker.removeListener("message", onMessage);
@@ -41,3 +43,7 @@ parentPort.on("message", message => {
   parentPort.postMessage({ result: workerData.magicNumber })
 });
 ```
+
+
+For more info regarding how to configure the pool to your needs, please follow the [generic-pool README](https://github.com/coopernurse/node-pool#readme)
+
