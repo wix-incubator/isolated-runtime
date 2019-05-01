@@ -78,13 +78,13 @@ function benchmark(requests, totalTime) {
   });
 }
 
-(async function go() {
+(async function run() {
   await setup();
 
   const [requests, totalTime] = process.argv
     .slice(2)
     .map(arg => parseInt(arg, 10));
-  console.log("Running with", { requests, totalTime });
+  console.log({ requests, totalTime });
 
   const results = await benchmark(requests, totalTime);
 
