@@ -1,0 +1,25 @@
+{
+  "name": "isolated-runtime-test-commons",
+  "version": "1.0.0",
+  "description": "Isolated Runtime Test Commons",
+  "main": "index.js",
+  "keywords": [
+    "isolated",
+    "runtime",
+    "isolated-runtime",
+    "test",
+    "commons",
+    "test-commons"
+  ],
+  "author": "",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "chance": "^1.0.18",
+    "fs-extra": "^7.0.1",
+    "lodash": "^4.17.11"
+  }
+}

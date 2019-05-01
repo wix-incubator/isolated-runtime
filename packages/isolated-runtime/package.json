@@ -1,0 +1,26 @@
+{
+  "name": "isolated-runtime",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [
+    "thread",
+    "runner",
+    "code",
+    "isolated"
+  ],
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib/"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "isolated-runtime-core": "^1.0.0",
+    "thread-pool-node": "^1.0.0"
+  },
+  "devDependencies": {
+    "isolated-runtime-test-commons": "^1.0.0"
+  }
+}

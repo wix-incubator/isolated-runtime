@@ -1,0 +1,20 @@
+{
+  "name": "vm2-babel-compiler",
+  "version": "1.0.0",
+  "description": "VM2 Babel Compiler",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.4.3",
+    "@babel/standalone": "^7.4.3"
+  },
+  "devDependencies": {
+    "vm2": "^3.6.11"
+  }
+}

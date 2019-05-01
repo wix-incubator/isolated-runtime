@@ -1,0 +1,22 @@
+{
+  "name": "thread-pool-node",
+  "version": "1.0.2",
+  "description": "Worker threads pool based on generic-pool",
+  "main": "index.js",
+  "keywords": [
+    "thread",
+    "worker",
+    "worker_threads",
+    "pool",
+    "threadpool"
+  ],
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "author": "Idan Attias",
+  "license": "ISC",
+  "dependencies": {
+    "generic-pool": "^3.7.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "isolated-runtime-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "lib/"
+  ],
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "vm2": "^3.6.11"
+  },
+  "devDependencies": {
+    "isolated-runtime-test-commons": "^1.0.0"
+  }
+}
