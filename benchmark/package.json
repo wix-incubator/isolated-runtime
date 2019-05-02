@@ -1,6 +1,6 @@
 {
   "name": "benchmark",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Benchmark for isolated-runtime",
   "main": "index.js",
@@ -8,8 +8,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "isolated-runtime": "^1.0.0",
-    "isolated-runtime-test-commons": "^1.0.0",
+    "isolated-runtime": "^1.0.1",
+    "isolated-runtime-test-commons": "^1.0.1",
     "stats-lite": "^2.2.0"
   },
   "dependencies": {

@@ -1,6 +1,6 @@
 {
   "name": "isolated-runtime-core",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Isolated Runtime Core",
   "main": "index.js",
   "keywords": [],
@@ -16,6 +16,6 @@
     "vm2": "^3.6.11"
   },
   "devDependencies": {
-    "isolated-runtime-test-commons": "^1.0.0"
+    "isolated-runtime-test-commons": "^1.0.1"
   }
 }

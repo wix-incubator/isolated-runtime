@@ -1,6 +1,6 @@
 {
   "name": "isolated-runtime-test-commons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Isolated Runtime Test Commons",
   "main": "index.js",
   "keywords": [

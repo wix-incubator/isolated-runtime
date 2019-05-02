@@ -1,9 +1,14 @@
 {
-  "version": "1.0.0",
-  "packages": ["packages/*", "benchmark"],
+  "version": "1.0.1",
+  "packages": [
+    "benchmark",
+    "packages/*"
+  ],
   "command": {
     "bootstrap": {
-      "npmClientArgs": ["--no-package-lock"]
+      "npmClientArgs": [
+        "--no-package-lock"
+      ]
     }
   }
 }

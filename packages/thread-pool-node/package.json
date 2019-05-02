@@ -1,6 +1,6 @@
 {
   "name": "thread-pool-node",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "Worker threads pool based on generic-pool",
   "main": "index.js",
   "keywords": [

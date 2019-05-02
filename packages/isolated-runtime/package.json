@@ -1,6 +1,6 @@
 {
   "name": "isolated-runtime",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Run un-trusted javascript code in a multi-tenant, isolated environment",
   "main": "index.js",
   "keywords": [
@@ -22,10 +22,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "isolated-runtime-core": "^1.0.0",
-    "thread-pool-node": "^1.0.0"
+    "isolated-runtime-core": "^1.0.1",
+    "thread-pool-node": "^1.0.1"
   },
   "devDependencies": {
-    "isolated-runtime-test-commons": "^1.0.0"
+    "isolated-runtime-test-commons": "^1.0.1"
   }
 }
