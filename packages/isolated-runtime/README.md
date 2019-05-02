@@ -76,7 +76,7 @@ runner.run({
   context: {
     a: 1,
     b: {
-      c: () => 2
+      c: 2
     }
   }
 })
@@ -84,7 +84,7 @@ runner.run({
 // index.js
 function foo() {
    console.log(global.a) // prints 1
-   console.log(global.b.c()) // prints 2
+   console.log(global.b.c) // prints 2
 }
 ```
 1. `external` - an array of strings, representing names of node-modules that are allowed to be loaded by the untrusted code (from a non-relative or absolute path stemming from `root`). Modules listed under `external` must also have their absolute path listed under `whitelistedPaths`, otherwise the module could not be loaded.
@@ -92,4 +92,4 @@ function foo() {
 1. `resolverOptions` - if `resolverModulePath` was passed to the `IsolatedRuntime` constructor, that resolver will be provided with `resolverOptions` as an arguemnt 
 
 ## Known Limitations
-Note that arguements passed to the invoked function *must* be serializable - passing `Buffer`s, for example, is not supported and will result in an exception being thrown and the code not being invoked.
+Note that arguments passed via the `args` option or attributes of `context` passed to the invoked function *must* be serializable - passing `Buffer`s, for example, is not supported and will result in an exception being thrown and the code not being invoked.
