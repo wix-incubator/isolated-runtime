@@ -28,7 +28,7 @@ IsolatedRuntime({
 
 `IsolatedRuntime` is the object providing the runtime functionality for executing the untrusted code, and allows controlling its priviliges and contraints by using the following options:
 
-* `poolOptions` - an options object to be passed to the underlying thread-pool implementation - see the `opts` section of the [https://www.npmjs.com/package/generic-pool](generic-pool documentation).
+* `poolOptions` - an options object to be passed to the underlying thread-pool implementation - see the `opts` section of the [generic-pool documentation](https://www.npmjs.com/package/generic-pool).
 * `sourceExtensions` - array of strings holding the allowed extensions of file that can be `require()`-ed by the code executed by the `run()` method.
 * `resolverModulePath` - a path to a module exporting a factory function returning a custom module-resolver function. The factory function takes the `resolverOptions` passed by the `run()` function, and returns a function of the form `(moduleName: string) => string`. That resolver function is expected to return the full path of the resolved module, or `null` if the module at the request path could not be found. e.g., a custom resolver that blacklists modules of given paths the vary from run to run be implemented the following way:
 ```js
