@@ -1,6 +1,4 @@
-# Isolated Runtime
-
-## Overview
+# isolated-runtime
 
 Running untrusted Javascript code (provided as a user-input, e.g.) incurs two possible risks:
 1. The code being run can interfere and modify the hosting process' state, breaching it's memory, files and global scope.
@@ -16,21 +14,34 @@ In order to achieve a good level of isolation between the untrusted code and the
 
 Threads are more lightweight compared to forking processes to execute the untrusted code, and combined with our custom implementation of a [thread-pool](../thread-pool-node) they form a robust runtime infrastructure that's capable of handling many simulataneous instances untrusted code running on the same host in an efficient manner.
 
-## Example
+## API
 ```js
-const { IsolatedRuntime } = require('isolated-runtime');
-
-const runtime = new IsolatedRuntime(/* options */)
-
-try {
-  await runtime.run({
-    folder,
-    file,
-    funcName,
-    args,
-    context
-  })
-} catch(e) {
-  // handle error
-}
+IsolatedRuntime({
+  root: string,
+  file: string,
+  funcName: string,
+  args: any[],
+  context: object,
+  external: string[],
+  whitelistedPaths: string[],
+  resolverOptions: object
+})
 ```
+`IsolatedRuntime` is the object providing the runtime functionality for executing the untrusted code, and allows controlling its priviliges and contraints by using the following options:
+1. `root` - to restrict untrusted code from loading code (using `require()`) from sources other than its own folder,  only paths that stem from `root` will be successfully `require()`-ed.
+1. `file` - the source-code file from which the function to execute should be loaded. This file is assumed to be a CommonJS module (i.e., exporting functions using `module.exports = { foo: () => 'foo' }` or `exports.foo = () => 'foo'`.
+1. `funcName` - the function name exported from the module provided as `file`
+1 `args` - an array of arguments to be provided to the function - e.g., if your exported function is:
+```js
+function a(b, c, d) {
+  return b + c + d
+}  
+```
+passing `[1, 1, 1]` will result in the functions returning `3`. See the [limitations](#known-limitations) section for important notes about what args are supported.
+1. `context` - 
+1. `external` - 
+1. `whitelistedPaths` -
+1. `resolverOptions` -
+
+## Known Limitations
+Note that arguements passed to the invoked function *must* be serializable - passing `Buffer`s, for example, is not supported and will result in an exception being thrown and the code not being invoked.
