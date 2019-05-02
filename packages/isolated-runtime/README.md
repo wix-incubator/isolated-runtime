@@ -32,7 +32,11 @@ IsolatedRuntime({
 * `sourceExtensions` - array of strings holding the allowed extensions of file that can be `require()`-ed by the code executed by the `run()` method.
 * `resolverModulePath` - a path to a module exporting a factory function returning a custom module-resolver function. The factory function takes the `resolverOptions` passed by the `run()` function, and returns a function of the form `(moduleName: string) => string`. That resolver function is expected to return the full path of the resolved module, or `null` if the module at the request path could not be found. e.g., a custom resolver that blacklists modules of given paths the vary from run to run be implemented the following way:
 ```js
-(resolverOptions) => (moduleName) => resolverOptions.blacklistedNames.some(b => moduleName.contains(b)) ? null : '/some/path/to/module'
+function resolverFactory (resolverOptions) {
+  return (moduleName) => resolverOptions.blacklistedNames.some(b => moduleName.contains(b)) ? 
+      null : 
+      '/some/path/to/module'
+}
 ```
 * `compilerModulePath` - In case the untrusted code need to be transpiled prior to being run, this argument can provide an absolute path to a module exporting a transpilation function of the form `(code: string) => string`, where `code` is the source code to transpile and the returned string is the transpiled code to be run.
 * `timeout` - number of milliseconds alotted to the unstructed code to completed prior to aborting the thread that runs it.
