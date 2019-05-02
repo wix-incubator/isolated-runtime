@@ -8,11 +8,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "axios": "^0.18.0",
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
     "isolated-runtime": "^1.0.0",
     "isolated-runtime-test-commons": "^1.0.0",
     "stats-lite": "^2.2.0"
+  },
+  "dependencies": {
+    "debug": "^4.1.1"
   }
 }
