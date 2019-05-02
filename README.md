@@ -87,7 +87,7 @@ Install isolated-runtime:
 
 ```npm install --save isolated-runtime```
 
-A simple example of using `isolated-runtime` for running un-trusted code:
+In your script (that can be anything from a cli-tool up to a fully-blown Express-base Node server):
 
 ```js
 const { IsolatedRuntime } = require("isolated-runtime");
@@ -101,11 +101,16 @@ const result = await runtime.run({
 });
 ```
 
-## Development
-- `npm i`
+# Contributing to isolated-runtime
 
-To run tests:
-- `npm t`
+We support Node 10 and updwards, so make sure you have the latest Node 10.x version.
+We also use [lenra](https://github.com/lerna/lerna) for managing our monorepo, so make sure to add new modules - if necessary - using the appropriate `lenra` command and conventions.
+Once you've got your issue or suggestion approved for contribution, submit a PR:
 
-To run benchmark tests:
-- `npm run benchmark`
+1. clone the repo 
+1. Run `npm i`
+1. Run all the tests using `npm t`
+1. Run `npm run benchmark` and take note of the results.
+1. Add tests for your bug-fix or feature, apply the code changes and make sure `npm t` runs all the test successfully.
+1. Make sure you've changed the documentation accordingly, if applicable. 
+1. Finally, run the benchmark test again, to make sure no major impact has been introduced by your changes.
