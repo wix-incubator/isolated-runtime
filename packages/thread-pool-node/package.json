@@ -3,6 +3,7 @@
   "version": "1.0.3",
   "description": "Worker threads pool based on generic-pool",
   "main": "index.js",
+  "homepage": "https://github.com/wix-incubator/isolated-runtime/tree/master/packages/thread-pool-node",
   "keywords": [
     "thread",
     "worker",

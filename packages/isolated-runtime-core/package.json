@@ -4,6 +4,7 @@
   "description": "Isolated Runtime Core",
   "main": "index.js",
   "keywords": [],
+  "homepage": "https://github.com/wix-incubator/isolated-runtime/tree/master/packages/isolated-runtime-core",
   "author": "",
   "license": "ISC",
   "files": [

@@ -3,6 +3,11 @@
   "version": "1.0.1",
   "description": "Run un-trusted javascript code in a multi-tenant, isolated environment",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wix-incubator/isolated-runtime.git"
+  },
+  "homepage": "https://wix-incubator.github.io/isolated-runtime/",
   "keywords": [
     "thread",
     "runner",

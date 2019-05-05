@@ -5,6 +5,7 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
+  "homepage": "https://github.com/wix-incubator/isolated-runtime/tree/master/packages/vm2-babel-compiler",
   "files": [
     "index.js",
     "index.d.ts"

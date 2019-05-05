@@ -3,6 +3,7 @@
   "version": "1.0.1",
   "description": "Isolated Runtime Test Commons",
   "main": "index.js",
+  "homepage": "https://github.com/wix-incubator/isolated-runtime/tree/master/packages/isolated-runtime-test-commons",
   "keywords": [
     "isolated",
     "runtime",
