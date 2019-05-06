@@ -1,4 +1,3 @@
-const assert = require("assert");
 const { IsolatedRuntime } = require("isolated-runtime");
 const debug = require("debug")("basic-example");
 
@@ -16,8 +15,9 @@ module.exports = async function run() {
 
   // the result is retrieved asynchronously
   debug({ result }); // { result: 5 }
-  assert(result === 5, "basic example result must be 5");
 
   // shutdown the runtime will closed all VMs and kill all open threads
   await runtime.shutdown();
+
+  return result;
 };

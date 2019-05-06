@@ -27,7 +27,6 @@
     "clean": "lerna clean --yes && rm -rf node_modules",
     "postinstall": "lerna bootstrap --hoist",
     "test": "node --experimental-worker node_modules/.bin/jest",
-    "test:docs": "node --experimental-worker ./scripts/test-docs.js",
     "posttest": "eslint .",
     "benchmark": "node --experimental-worker benchmark $npm_package_config_benchmark_requests $npm_package_config_benchmark_time"
   },
