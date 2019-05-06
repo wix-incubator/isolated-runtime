@@ -2,7 +2,8 @@
   "version": "1.0.2",
   "packages": [
     "benchmark",
-    "packages/*"
+    "packages/*",
+    "docs/examples/*"
   ],
   "command": {
     "bootstrap": {

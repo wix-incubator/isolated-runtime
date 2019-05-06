@@ -7,6 +7,8 @@ You might be offering your users to customize your product using custom JS code 
 The driving idea behind `isolated-runtime` is having the untrusted code as files deployed to some filesystem, then having `isolated-runtime` load a module from one of those files, and executing a function from that module with the provided arguments, returning a Promise that resolves to the function's return value. The function's runtime-context is isolated from the host's one, and even better - multiple instances of the same function can be run without clashing with each other via global state.
 
 ## Usage examples
+For more examples, see the [examples](examples.md) page.
+
 Assume the following file structure (with the `modules` folder represented code submitted from an untrusted source):
 
 ```
