@@ -13,8 +13,8 @@ This will be our simple isolated runtime setup:
 ```js
 // index.js
 
-const assert = require("assert");
 const { IsolatedRuntime } = require("isolated-runtime");
+const debug = require("debug")("basic-example");
 
 module.exports = async function run() {
   // create a new instance
@@ -29,10 +29,11 @@ module.exports = async function run() {
   });
 
   // the result is retrieved asynchronously
-  console.log({ result }); // { result: 5 }
-  assert(result === 5, "basic example result must be 5");
+  debug({ result }); // { result: 5 }
 
   // shutdown the runtime will closed all VMs and kill all open threads
   await runtime.shutdown();
+
+  return result;
 };
 ```
